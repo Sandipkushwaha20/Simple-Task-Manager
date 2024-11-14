@@ -1,4 +1,4 @@
-Certainly! Here’s the updated **README.md** structure with placeholders for images, where you can insert screenshots or visuals of your project:
+
 
 ---
 
@@ -8,7 +8,7 @@ Certainly! Here’s the updated **README.md** structure with placeholders for im
 
 The **Task Management Dashboard** is a web application that allows users to create, view, edit, and delete tasks. Each task has key attributes like **title**, **description**, **due date**, and **priority**. The dashboard also offers features for searching, filtering, and sorting tasks based on criteria such as **priority** and **status** (completed or overdue).
 
-![Dashboard Preview](./images/dashBoard.png)  
+![Dashboard Preview](./public/images/dashBoard.png)  
 
 ## Project Goals
 
@@ -83,9 +83,9 @@ Once the project is set up, you can start building out the core functionality fo
 - **Task filtering and searching**: Implement search and filter functionality for sorting tasks by keywords, priority, or completion status.
 - **Data persistence**: Use the browser’s `localStorage` to store tasks and maintain data between sessions.
 
-![Task Management Feature](./images/addTask.png) 
-![Task Management Feature](./images/editTask.png)  
-![Task Management Feature](./images/deleteTask.png)  
+![Task Management Feature](./public/images/addTask.png) 
+![Task Management Feature](./public/images/editTask.png)  
+![Task Management Feature](./public/images/deleteTask.png)  
 
 
 ## Step 3: UI & Responsiveness
