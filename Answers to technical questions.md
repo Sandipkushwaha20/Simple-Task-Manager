@@ -1,11 +1,11 @@
-**Q1**) How long did you spend on the coding test? 
+**Q1) How long did you spend on the coding test?**
 
 **Answer**: The task was completed over a span of 9 to 10 hours. Initially, I spent 15 minutes understanding the problem statement. I then dedicated 2 hours to designing a rough UI layout, followed by 3 hours implementing the UI in ReactJS, utilizing Tailwind CSS for styling. The remaining 4 hours were focused on developing the core functionality of the application, which included implementing interactions with local storage for storing, updating, and deleting tasks.
 
 
 
 
-**Q2**) What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
+**Q2) What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.**
 
 **Answer**:
 
@@ -149,7 +149,7 @@ This setup allows you to use utility-first CSS classes in your React components,
 By combining React’s function-based components with hooks and the flexibility of Tailwind CSS, I can easily build and manage the UI and state logic in a clean, maintainable manner.
 
 
-**Q3)** How would you track down a performance issue in production? Have you ever had to do this?
+**Q3) How would you track down a performance issue in production? Have you ever had to do this?**
 
 **Answer:** To ensure optimal performance and maintain code quality, I follow best practices such as removing comments and unnecessary console.log() statements before production deployment. For large images and videos, I implement lazy loading to improve load times and reduce initial page load impact by only loading content as it becomes visible on the screen.
 
@@ -157,7 +157,7 @@ For deployment, I prefer using Vercel because it provides seamless updates and e
 
 
 
-**Q4)** If you had more time, what additional features or improvements would you consider adding to the task management application?
+**Q4) If you had more time, what additional features or improvements would you consider adding to the task management application?**
 
 **Answer:** If I had more time, I would consider adding the following features and improvements to the task management application:
 

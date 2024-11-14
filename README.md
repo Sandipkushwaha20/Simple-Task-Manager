@@ -1,13 +1,12 @@
 
-
 ---
-
 # Simple Task Manager
 
 ## Project Overview
 
 The **Task Management Dashboard** is a web application that allows users to create, view, edit, and delete tasks. Each task has key attributes like **title**, **description**, **due date**, and **priority**. The dashboard also offers features for searching, filtering, and sorting tasks based on criteria such as **priority** and **status** (completed or overdue).
 
+## DashBoard
 ![Dashboard Preview](./public/images/dashBoard.png)  
 
 ## Project Goals
@@ -52,10 +51,17 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'regal-blue': '#243c5a',
+        'High': '#e74c3c',
+        'Low' : '#f4d03f',
+        'Medium' : '#e74c3c'
+      }
+    },
   },
   plugins: [],
-};
+}
 ```
 
 In the `src/index.css` file, import Tailwind CSS:
@@ -83,28 +89,16 @@ Once the project is set up, you can start building out the core functionality fo
 - **Task filtering and searching**: Implement search and filter functionality for sorting tasks by keywords, priority, or completion status.
 - **Data persistence**: Use the browser’s `localStorage` to store tasks and maintain data between sessions.
 
+## Add Task
 ![Task Management Feature](./public/images/addTask.png) 
+
+## Edit Task
 ![Task Management Feature](./public/images/editTask.png)  
+
+## DeleteTask
 ![Task Management Feature](./public/images/deleteTask.png)  
 
 
 ## Step 3: UI & Responsiveness
 
 Use **Tailwind CSS** to style your application. Tailwind’s utility-first approach allows you to quickly build a modern, responsive UI. You can add classes such as `flex`, `grid`, `w-full`, and `sm:w-1/2` to achieve a responsive layout.
-
-![Responsive UI Example](path-to-your-image/responsive-ui-example.png)  
-*Add a screenshot demonstrating how your application looks on different devices.*
-
-## Next Steps
-
-- Add **user authentication** (if you need to expand functionality).
-- Integrate a backend service (e.g., **Firebase** or **Node.js** with **Express**) for more advanced features like multi-user access, cloud storage, and real-time updates.
-- Implement **drag-and-drop** task management for better user interaction.
-
----
-
-### How to Add Images:
-1. Place your images (like screenshots or previews) inside the `/assets` or `/images` folder within your project directory, or upload them to a public URL.
-2. Update the `path-to-your-image` with the relative or full URL path to your image file in the markdown code.
-
-
