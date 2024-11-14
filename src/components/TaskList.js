@@ -1,10 +1,9 @@
-// TaskList.js
+
 
 import React from "react";
 import TaskItem from "./TaskItem";
 
 function TaskList({ title, tasks, filter, searchQuery, toggleComplete, deleteTask, startEdit  }) {
-  // Filter tasks by status
   console.log(tasks, "1111sksksksksksksk");
   const filteredTasks = tasks.filter((task) => {
     if (filter === "upcoming")
@@ -15,7 +14,6 @@ function TaskList({ title, tasks, filter, searchQuery, toggleComplete, deleteTas
     return task;
   });
 
-  // Further filter tasks based on the search query
   const searchFilteredTasks = filteredTasks.filter(
     (task) =>
       task.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

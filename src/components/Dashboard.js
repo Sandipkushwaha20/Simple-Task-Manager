@@ -1,7 +1,6 @@
 // Dashboard.js
 
 import React, { useState } from 'react';
-// import TaskForm from './TaskForm';
 import TaskList from './TaskList';
 import EditTaskModal from './EditTask';
 import CreateTask from './CreateTask';
@@ -11,10 +10,9 @@ function Dashboard() {
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("myTasks")) || []);
   const [filteredTasks, setFilteredTasks] = useState(tasks);
   const [searchQuery, setSearchQuery] = useState('');
-  const [taskToEdit, setTaskToEdit] = useState(null); // Track the task to edit
+  const [taskToEdit, setTaskToEdit] = useState(null); 
   const [selectedPriority, setSelectedPriority] = useState("");
 
-  // Function to toggle the completion status of a task
   const toggleComplete = (taskId) => {
     setTasks(prevTasks =>{
 
@@ -27,7 +25,6 @@ function Dashboard() {
   });
   };
 
-  // Function to delete a task
   const deleteTask = (taskId) => {
     setTasks(prevTasks =>{  
       const allTasks = prevTasks.filter(task => task.id !== taskId)
@@ -52,14 +49,14 @@ function Dashboard() {
       localStorage.setItem("myTasks", JSON.stringify(allTasks))
       return allTasks;
   });
-    setTaskToEdit(null); // Close the edit modal
+    setTaskToEdit(null); 
   }; 
 
   const handleAddTask = (newTask) =>{
     setTasks(prevTasks => { 
       const allTasks =  [
-      ...prevTasks, // Spread existing tasks into a new array
-      newTask       // Add the new task to the end of the array
+      ...prevTasks, 
+      newTask       
   ]
   localStorage.setItem("myTasks", JSON.stringify(allTasks))
   return allTasks;
@@ -70,20 +67,18 @@ function Dashboard() {
   }
 
 
-  // Filter tasks by priority
   const filterTasksByPriority = (priority) => {
     if (priority === "") return tasks;
     return tasks.filter((task) => task.priority === priority);
 };
 
-// Handle priority change for filtering
+
 const handleFilterChange = (e) => {
     const priority = e.target.value;
     console.log(priority, "ssisksk");
     setSelectedPriority(priority);
     setFilteredTasks(filterTasksByPriority(priority));
 };
-  // console.log(setTasks, "skskskssk");
 
   return (
     <div className="h-20 px-5 items-center justify-center  border-b-richblack-700 bg-richblack-800 transition-all duration-200">
@@ -108,7 +103,6 @@ const handleFilterChange = (e) => {
           </div>
 
           <div className='flex gap-5'>
-            {/* <TaskForm setTasks={setTasks} /> */}
             <button
               className='bg-yellow-300 rounded-xl p-2'
               onClick={()=> setOpenModal(e=>!e)}
@@ -119,7 +113,6 @@ const handleFilterChange = (e) => {
             handleAddTask = {handleAddTask}/>}
 
           
-            {/* <p>Filer</p> */}
             <select 
               onChange={handleFilterChange} 
               value={selectedPriority}
@@ -138,7 +131,6 @@ const handleFilterChange = (e) => {
 
         <div className="grid grid-cols-3 text-2xl">
           <TaskList
-            // className = "bg-richblack-900"
             title="Upcoming Tasks"
             tasks={selectedPriority ? filteredTasks : tasks}
             filter="upcoming"

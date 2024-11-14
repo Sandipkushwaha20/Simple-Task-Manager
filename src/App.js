@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="text-3xl bg-richblack-900">
       <Dashboard/>
-      {/* <p>Hello</p> */}
     </div>
   );
 }
