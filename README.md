@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-The **Task Management Dashboard** is a web application that allows users to create, view, edit, and delete tasks. Each task has key attributes like **title**, **description**, **due date**, and **priority**. The dashboard also offers features for searching, filtering, and sorting tasks based on criteria such as **priority** and **status** (completed or overdue).
+The **Simple Task Manager** is a web application that allows users to create, view, edit, and delete tasks. Each task has key attributes like **title**, **description**, **due date**, and **priority**. The dashboard also offers features for searching, filtering, and sorting tasks based on criteria such as **priority** and **status** (completed or overdue).
 
 ## DashBoard
 ![Dashboard Preview](./public/images/dashBoard.png)  
