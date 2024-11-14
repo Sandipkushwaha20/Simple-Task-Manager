@@ -4,7 +4,7 @@ import React from "react";
 import TaskItem from "./TaskItem";
 
 function TaskList({ title, tasks, filter, searchQuery, toggleComplete, deleteTask, startEdit  }) {
-  console.log(tasks, "1111sksksksksksksk");
+  
   const filteredTasks = tasks.filter((task) => {
     if (filter === "upcoming")
       return !task.completed && new Date(task.dueDate) > new Date();

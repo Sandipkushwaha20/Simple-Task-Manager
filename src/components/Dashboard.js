@@ -62,7 +62,6 @@ function Dashboard() {
   return allTasks;
   })
     
-    console.log(tasks, "sksksksksksks");
     setOpenModal(e => !e);
   }
 
@@ -75,7 +74,6 @@ function Dashboard() {
 
 const handleFilterChange = (e) => {
     const priority = e.target.value;
-    console.log(priority, "ssisksk");
     setSelectedPriority(priority);
     setFilteredTasks(filterTasksByPriority(priority));
 };
