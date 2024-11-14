@@ -5,6 +5,7 @@ import TaskItem from "./TaskItem";
 
 function TaskList({ title, tasks, filter, searchQuery, toggleComplete, deleteTask, startEdit  }) {
   // Filter tasks by status
+  console.log(tasks, "1111sksksksksksksk");
   const filteredTasks = tasks.filter((task) => {
     if (filter === "upcoming")
       return !task.completed && new Date(task.dueDate) > new Date();
@@ -22,8 +23,8 @@ function TaskList({ title, tasks, filter, searchQuery, toggleComplete, deleteTas
   );
 
   return (
-    <div className="bg-richblack-500 p-3 rounded-xl m-4">
-      <h2 className="text-2xl font-bold mb-2 text-center ">{title}</h2>
+    <div className="bg-richblack-50 p-3 rounded-xl m-4">
+      <h2 className="text-3xl font-bold mb-10 text-center ">{title}</h2>
       {searchFilteredTasks.length > 0 ? (
         searchFilteredTasks.map((task) => (
           <TaskItem 
@@ -35,7 +36,8 @@ function TaskList({ title, tasks, filter, searchQuery, toggleComplete, deleteTas
            />
         ))
       ) : (
-        <p>No tasks found.</p>
+        
+        <p className="text-center">No tasks found.</p>
       )}
     </div>
   );

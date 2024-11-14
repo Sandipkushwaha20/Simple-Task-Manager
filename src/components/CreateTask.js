@@ -2,41 +2,42 @@
 
 import React, { useState } from 'react';
 
-function EditTaskModal({ task, handleEditTask, closeModal }) {
-  const [title, setTitle] = useState(task.title);
-  const [description, setDescription] = useState(task.description);
-  const [dueDate, setDueDate] = useState(task.dueDate);
-  const [priority, setPriority] = useState(task.priority);
+function CreateTask({handleAddTask, closeModal }) {
+  const [title, setTitle] = useState();
+  const [description, setDescription] = useState();
+  const [dueDate, setDueDate] = useState();
+  const [priority, setPriority] = useState("Low");
 
   const handleSubmit = () => {
-    const updatedTask = {
-      ...task,
+    const id = `${new Date()}-${Math.random()}`
+    const addTask = {
+      id,
       title,
       description,
       dueDate,
       priority,
     };
-    handleEditTask(updatedTask);
+    handleAddTask(addTask);
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center backdrop-blur-sm bg-gray-500 bg-opacity-70 rounded-xl">
+    <div className="fixed inset-0 flex items-center justify-center bg-gray-500 backdrop-blur-sm bg-opacity-70 rounded-xl">
       <div className="bg-gray-600 p-4 rounded-xl shadow-md w-96 px-5 py-7">
-        <h2 className="text-2xl font-bold mb-4 text-white">Edit Task</h2>
+        <h2 className="text-2xl font-bold mb-4 text-white">Add Task</h2>
         
         <input
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Task Title"
-          className="mb-2 p-2 border bg-gray-400 text-gray-900 rounded w-full"
+          className="mb-2 p-2 border bg-gray-400 text-gray-900 rounded w-full placeholder-gray-700"
         />
         
         <textarea
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           placeholder="Description"
-          className="mb-2 p-2 border bg-gray-400 text-gray-900 rounded w-full"
+          className="mb-2 p-2 border bg-gray-400 text-gray-900 rounded w-full placeholder-gray-700"
         />
         
         <input
@@ -56,7 +57,7 @@ function EditTaskModal({ task, handleEditTask, closeModal }) {
           <option value="Low">Low</option>
         </select>
         
-        <div className="flex justify-end space-x-2 mt-4">
+        <div className="flex justify-end space-x-2">
           <button onClick={closeModal} className="bg-gray-300 text-black px-4 py-2 rounded">
             Cancel
           </button>
@@ -69,4 +70,4 @@ function EditTaskModal({ task, handleEditTask, closeModal }) {
   );
 }
 
-export default EditTaskModal;
+export default CreateTask;
